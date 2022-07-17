@@ -1,6 +1,7 @@
 #include <limine.h>
 #include <types.h>
 #include <limine/limine-terminal.h>
+#include <stdio.h>
 
 volatile struct limine_terminal_request terminal_request = {
 	.id = LIMINE_TERMINAL_REQUEST,
@@ -20,6 +21,7 @@ void _start(void) {
 
 	init_limine_terminal();
 	puts_limine_terminal("Hello World!");
+	puts("Hello again");
 
 	done();
 }
