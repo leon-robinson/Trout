@@ -1,8 +1,8 @@
-#include <stdint.h>
-#include <stddef.h>
 #include <limine.h>
+#include <types.h>
+#include <limine/limine-terminal.h>
 
-static volatile struct limine_terminal_request terminal_request = {
+volatile struct limine_terminal_request terminal_request = {
 	.id = LIMINE_TERMINAL_REQUEST,
 	.revision = 0,
 };
@@ -18,8 +18,8 @@ void _start(void) {
 			done();
 	}
 
-	struct limine_terminal *terminal = terminal_request.response->terminals[0];
-	terminal_request.response->write(terminal, "Hello World!", 12);
+	init_limine_terminal();
+	puts_limine_terminal("Hello World!");
 
 	done();
 }
