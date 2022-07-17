@@ -20,8 +20,7 @@ void _start(void) {
 	}
 
 	init_limine_terminal();
-	puts_limine_terminal("Hello World!");
-	printf("PRINTF TEST: %d %x %p", 123, 0xABC, 0xffffffff80000000);
+	printf("Hello World!");
 
 	done();
 }
