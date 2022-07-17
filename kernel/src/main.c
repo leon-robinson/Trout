@@ -1,4 +1,4 @@
-#include <limine.h>
+#include <thirdparty/limine.h>
 #include <types.h>
 #include <limine/limine-terminal.h>
 #include <stdio.h>
@@ -21,7 +21,7 @@ void _start(void) {
 
 	init_limine_terminal();
 	puts_limine_terminal("Hello World!");
-	puts("Hello again");
+	printf("PRINTF TEST: %d %x %p", 123, 0xABC, 0xffffffff80000000);
 
 	done();
 }

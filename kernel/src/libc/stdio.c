@@ -7,3 +7,9 @@ int puts(const char *str)
 	putch_limine_terminal('\n');
 	return 0;
 }
+
+int putchar(int character)
+{
+	putch_limine_terminal(character);
+	return character;
+}
