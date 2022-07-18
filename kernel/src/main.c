@@ -14,6 +14,11 @@ volatile struct limine_memmap_request memmap_request = {
 	.revision = 0,
 };
 
+volatile struct limine_hhdm_request hhdm_request = {
+	.id = LIMINE_HHDM_REQUEST,
+	.revision = 0,
+};
+
 static void done(void) {
 	for (; ; )
 		__asm__ volatile("hlt");
@@ -26,6 +31,7 @@ void _start(void) {
 	}
 
 	init_limine_terminal();
+
 	pmm_init();
 
 	done();

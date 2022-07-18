@@ -2,7 +2,7 @@ override KERNEL := bin/kernel.elf
 
 override CC := x86_64-elf-gcc
 
-CFLAGS ?= -O2 -g -Wall -Wextra -Wpedantic -Werror -pipe
+CFLAGS ?= -O2 -g -Wall -Wextra -Wpedantic -pipe
 
 LDFLAGS ?= 
 
